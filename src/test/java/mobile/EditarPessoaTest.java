@@ -30,6 +30,9 @@ public class EditarPessoaTest {
         capacidade.setCapability(MobileCapabilityType.DEVICE_NAME, "Android Emulator");
         capacidade.setCapability(AndroidMobileCapabilityType.UNICODE_KEYBOARD, true);
 
+        capacidade.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, "com.eliasnogueira.workshop");
+        capacidade.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, "activities.ListActivity");
+
         AppiumDriver driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), capacidade);
 
         driver.findElement(By.id("com.eliasnogueira.workshop:id/fab")).click();
